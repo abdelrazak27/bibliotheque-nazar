@@ -4,7 +4,7 @@ NAZAR Library est une bibliothèque fictive qui regroupe des livres.
 
 ## Prérequis
 
-- PHP (version recommandée : +8.0)
+- PHP (version recommandée : +8.1)
 - Symfony
 - Composer
 - MySQL (version recommandée : +5.7)
