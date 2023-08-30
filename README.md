@@ -34,7 +34,7 @@ DATABASE_URL="mysql://USERNAME:PASSWORD@127.0.0.1:3306/DB_NAME?serverVersion=8.0
 ```
 
 4. Importer la base de donnée localement :
-- Importer le fichier .sql nazar_db si vous l'avez en votre possession.
+- Importer le fichier .sql nazar_db si vous l'avez en votre possession (disponible dans les fichiers, à la racine).
 
 5. Créer la base de données (si pas possible d'importer) :
 - Si la base de données n'existe pas déjà, vous pouvez la créer avec:
