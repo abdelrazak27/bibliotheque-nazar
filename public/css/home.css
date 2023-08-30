@@ -1,0 +1,43 @@
+.container {
+    padding: 100px 0;
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+
+.illustration-container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.illustration-content {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px hsla(160, 22%, 61%, 0.5);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.content p {
+    margin: 0;
+    width: 100%;
+    font-family: 'Carter One', cursive;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .illustration-container {
+        width: 40%;
+        margin: 0 auto;
+    }
+}

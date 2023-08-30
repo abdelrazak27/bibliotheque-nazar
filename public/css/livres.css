@@ -1,0 +1,134 @@
+.title {
+    font-family: 'Carter One', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.container {
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+.container-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+.container-top form {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+.container-top form input {
+    width: 50%;
+}
+
+.container-top form select {
+    width: 50%;
+}
+
+#button-search {
+    padding: 0!important;
+    width: 45px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-message {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width: 572px) {
+    .cards {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 200px; 
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 15px 10px 15px;
+    box-shadow: 0px 0px 5px hsla(160, 22%, 61%, 0.1);
+}
+
+.card img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.25;
+    filter: blur(2px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.card:hover img {
+    opacity: 0.3;
+    filter: blur(0);
+}
+
+.card-titre {
+    color: white;
+    z-index: 2; 
+    position: relative; 
+    margin: 5px 0;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Carter One', cursive;
+    font-size: 1.3rem;
+}
+
+.card p:not(.card-titre) {
+    color: white;
+    z-index: 2; 
+    position: relative; 
+    margin: 5px 0; 
+    font-size: .9rem;
+    font-weight: 400;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+#button-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.no-books {
+    grid-column: span 4; 
+}

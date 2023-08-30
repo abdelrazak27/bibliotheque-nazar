@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NAZAR Library - {{ livre.titre }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/details.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <a href="{{ path('app_livre_index') }}" class="button button-secondary button-rounded" id="button-goback"><box-icon name='chevron-left' color='#041b2a' ></box-icon>retour</a>
+    <h1 class="title">{{ livre.titre }} #{{ livre.id }}</h1>
+    <div class="content">
+        <div class="illustration">
+            <img src="{{ asset('uploads/images/' ~ livre.imagePath) }}" alt="{{ livre.titre }}" />
+        </div>
+        <div class="informations">
+            <h2>Informations</h2>
+            <p>Titre : {{ livre.titre }}
+                <br/>Auteur : {{ livre.auteur }}
+                <br/>Catégorie : {{ livre.categorie ? livre.categorie.nom : 'Non catégorisé' }}
+                <br/>Date d'édition : {{ livre.dateEdition ? livre.dateEdition|date('d/m/Y') : '' }}</p>
+            <h2>Résumé</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odio expedita ad facilis dolore dolores voluptate, exercitationem repellat dolor illo, voluptatem officia veniam animi temporibus, dicta ea accusantium tempore esse.</p>
+            <p class="dates-information">Ajouté le {{ livre.dateAjout ? livre.dateAjout|date('d/m/Y') : '' }}
+            {% if livre.dateModification %}
+                <br />Modifié le {{ livre.dateModification|date('d/m/Y') }}
+            {% endif %}
+            </p>
+            {% if app.user %}
+            <a href="{{ path('app_livre_edit', {'id': livre.id}) }}" class="button button-secondary button-rounded-square" id="button-edit-book"><box-icon name='pencil' type='solid' color='#041b2a' ></box-icon>éditer</a>
+            {{ include('livre/_delete_form.html.twig') }}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

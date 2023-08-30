@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="illustration-container">
+        <img src="{{ asset('images/illustration.png') }}" alt="" class="illustration-content">
+    </div>
+    <div class="content">
+        <p>Bienvenue sur le site de notre bibliothèque !
+            <br />
+            <br />
+            Retrouvez dès maintenant tous nos livres disponibles.
+            Elle est souvent mise à jour par notre équipe, alors ne vous en faîtes pas, vous trouverez votre bonheur !</p>
+        <a href="{{ path('app_livre_index') }}" class="button button-secondary button-rounded-square">VOIR LES LIVRES</a>
+    </div>
+</div>
+{% endblock %}

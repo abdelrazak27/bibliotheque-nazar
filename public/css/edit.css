@@ -1,0 +1,52 @@
+.title {
+    font-family: 'Carter One', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+#button-goback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.container {
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+.container form {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#button-add {
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+#livre select {
+    border-radius: 5px;
+}
+
+#livre div:nth-child(4) div select {
+    width: 100%;
+}
+
+#livre div:nth-child(4) div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+#button-delete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #EC5757;
+    font-size: 1rem;
+}

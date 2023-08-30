@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}NAZAR Library{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>📘</text></svg>">
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="{{ path('app_home') }}" class="button button-primary">NAZAR Library</a>
+            </div>
+            <div class="navbar-links">
+                {% if app.user %}
+                    <div class="username">
+                        <box-icon name='user-circle' type='solid' flip='horizontal' color='#87b2a4' ></box-icon>
+                        <p>{{ app.user.userIdentifier }}</p>
+                    </div>
+                    <a href="{{ path('app_logout') }}" class="button button-secondary button-rounded">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('app_login') }}" class="button button-primary">connexion</a>
+                    <a href="{{ path('app_register') }}" class="button button-secondary button-rounded">inscription</a>
+                {% endif %}
+            </div>
+        </nav>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>
+

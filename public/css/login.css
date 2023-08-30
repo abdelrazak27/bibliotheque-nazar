@@ -1,0 +1,33 @@
+.title {
+    font-family: 'Carter One', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.container {
+    padding: 100px 0;
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+.button-rounded-square {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Carter One', cursive;
+    margin: 0;
+    text-align: center;
+}
+
+p a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.alert {
+    margin: 0;
+    color: #EC5757;
+}

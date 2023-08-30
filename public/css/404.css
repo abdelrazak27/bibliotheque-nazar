@@ -1,0 +1,14 @@
+.title {
+    font-family: 'Carter One', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.container {
+    padding: 200px 0;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+}

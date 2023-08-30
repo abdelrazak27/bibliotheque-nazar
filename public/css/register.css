@@ -1,0 +1,70 @@
+.title {
+    font-family: 'Carter One', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.container {
+    padding: 100px 0;
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+.button-rounded-square {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Carter One', cursive;
+    margin: 0;
+    text-align: center;
+}
+
+p a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+form div:nth-child(3) {
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 8px;
+}
+
+form div:nth-child(3) label {
+    cursor: pointer;
+    user-select: none;
+}
+
+form div:nth-child(3) input {
+    appearance: none;
+    width: 20px;
+    height: 24px;
+    background: #041B2A;
+    border: 2px solid #87B2A4;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    margin: 0;
+}
+
+form div:nth-child(3) input:checked {
+    background: #87B2A4;
+}
+
+form div:nth-child(3) input:focus {
+    box-shadow: none;
+}
+
+form div:nth-child(3) input:checked::before {
+    content: "✓";
+    color: #041B2A;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}

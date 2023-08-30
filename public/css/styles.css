@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    background: #041B2A;
+    width: 90%;
+    max-width: 1200px;
+    font-family: 'Poppins', sans-serif;
+    color: #87B2A4;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.navbar .username {
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logo {
+    font-family: 'Carter One', cursive;
+    font-size: 1.4rem;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: .9rem;
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+.button-primary {
+    color: #87B2A4;
+}
+
+.button-primary:hover {
+    color: #d8ece6;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+}
+
+.button-secondary {
+    color: #041B2A;
+    background: #87B2A4;
+}
+
+.button-secondary:hover {
+    background: #d8ece6;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+}
+
+.button-rounded {
+    padding: 5px 20px;
+    border-radius: 999px;
+}
+
+.button-rounded-square {
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-family: 'Carter One', cursive;
+}
+
+input {
+    background: #87B2A4;
+    border: none;
+    border-radius: 5px;
+    color: #041B2A;
+    padding: 8px 10px;
+    font-weight: 600;
+}
+
+.input-secondary {
+    padding: 8px 13px;
+    border-radius: 999px;
+    outline: none;
+    box-shadow: inset 0 0 0 2px #87B2A4;
+    background: #041B2A;
+    color: #87B2A4;
+}
+
+.input-secondary:focus {
+    background: #09283d;
+    outline: none;
+    box-shadow: inset 0 0 0 2px #87B2A4;
+}
+
+.input-secondary::placeholder {
+    color: #87b2a486;
+}
+
+input:focus {
+    background: #d8ece6;
+    outline: none;
+    box-shadow: inset 0 0 0 2px #87B2A4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    font-family: 'Carter One', cursive;
+    padding-bottom: 5px;
+}
+
+form div ul {
+    list-style-type: none;
+    padding: 0 0 5px 10px;
+    margin: 0;
+    color: #EC5757;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select {
+    background: #87B2A4;
+    color: #041B2A;
+    border: none;
+    border-radius: 999px;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 600;
+    background-image: url('../images/chevron-down.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select:focus {
+    background-image: url('../images/chevron-up.png');
+    outline: none;
+}
+
+select option {
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar-links {
+        gap: 0px;
+        flex-direction: column;
+    }
+}
