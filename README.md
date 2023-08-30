@@ -35,16 +35,16 @@ DATABASE_URL="mysql://USERNAME:PASSWORD@127.0.0.1:3306/DB_NAME?serverVersion=8.0
 ```
 
 4. Importer la base de donnée localement :
-- Importer le fichier .sql nazar_db si vous l'avez en votre possession (disponible dans les fichiers, à la racine).
+- Importer le fichier .sql nazar_db si vous l'avez en votre possession (disponible dans les fichiers, à la racine). Elle permet d'avoir quelques livres déjà fait.
 
-5. Créer la base de données (si pas possible d'importer) :
+5. Créer la base de données (si la base de données n'a pas été importer) :
 - Si la base de données n'existe pas déjà, vous pouvez la créer avec:
 ```bash 
 php bin/console doctrine:database:create
 ```
 
 6. Appliquer les migrations : 
-- Pour créer ou mettre à jour les tables nécessaires :
+- Pour créer ou mettre à jour les tables nécessaires (si la base de données n'a pas été importer) :
 ```bash
 php bin/console doctrine:migrations:migrate
 ```
