@@ -14,7 +14,7 @@ NAZAR Library est une bibliothèque fictive qui regroupe des livres.
 1. Cloner le dépôt :
 
 ```bash
-git clone lien_du_repo.git
+git clone https://github.com/abdelrazak27/bibliotheque-nazar.git
 ```
 
 2. Installer les dépendances :
